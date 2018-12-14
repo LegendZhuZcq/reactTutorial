@@ -1,7 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+  CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Col, FormFeedback  } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import {Control, LocalForm, Errors} from 'react-redux-form';
+
+
+class CommentForm extends Component{
+    render(){
+      return (
+        <div className="row row-content">
+          <div className="col-12">
+            <h3>Send us your Feedback</h3>
+          </div>
+         <div className="col-12 col-md-9">
+          <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+            <Row className="form-group">
+            </Row>
+          </LocalForm>
+        </div>
+        </div>
+      );
+    }
+}
 
 function RenderDish({dish}){
   if(dish!=null)
